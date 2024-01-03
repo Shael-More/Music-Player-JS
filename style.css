@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+
+}
+
+.player {
+    border: 1px solid transparent;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0,0,0,0.2);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.track-art {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 24px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 6px 5px #ccc;
+}
+
+.now-playing {
+    font-size: 16px;
+}
+
+.track-name {
+    font-size: 36px;
+}
+
+.artist-name {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.seek-slider,
+.volume-slider {
+    height: 5px;
+    background: #83a9ff;
+    appearance: none;
+    transition: opacity 0.2s;
+}
+
+.seek-slider::-webkit-slider-thumb,
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 5px solid #83a9ff;
+    border-radius: 50%;
+    cursor: grab;
+}
+
+.seek-slider:hover,
+.volume-slider:hover {
+    opacity: 1;
+}
+
+.seek-slider {
+    width: 60%;
+    border-radius: 20px;
+}
+
+.volume-slider {
+    width: 30%;
+    border-radius: 20px;
+}
+
+
+.current-time, 
+.total-duration {
+    padding: 10px;
+}
+
+i.fa-volume-low,
+i.fa-volume-high {
+    padding: 10px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.buttons i {
+    font-size: 50px;
+}
+
+.active {
+    color: #000;
+} 
+
+.random-track,
+.prev-track,
+.playpause-track,
+.next-track,
+.repeat-track {
+    padding: 20px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+
+.randomActive {
+    color: #000;
+} 
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
+.loader {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .stroke {
+    background: #f1f1f1;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    animation: animate 1.4s linear infinite;
+}
+
+@keyframes animate {
+    50% {
+        height: 20%;
+        background-color: #83a9ff;
+    }
+    100% {
+        height: 100%;
+        background-color: #83a9ff;
+    }
+}
+
+
+.stroke:nth-child(1) {
+    animation-delay: 0s ;
+}
+
+.stroke:nth-child(2) {
+    animation-delay: 0.3s ;
+}
+
+.stroke:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.stroke:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.stroke:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.stroke:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.stroke:nth-child(7) {
+    animation-delay: 0s;
+}
